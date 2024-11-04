@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     background-color: rgba(30, 30, 30, 0.8);/* position: relative; */
     position: fixed; /* Keeps the navbar fixed at the top */
     top: 0;
@@ -38,7 +38,6 @@ body {
 }
 
 .navbar nav a {
-    align-items: right;
     color: #ffffff;
     margin: 0 1rem;
     text-decoration: none;
@@ -49,8 +48,6 @@ body {
 }
 
 /* Section Styles */
-
-
 .section {
     height: 100vh;
     padding: 4rem 2rem;
@@ -116,7 +113,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 #scrollBtn:hover {
@@ -127,7 +124,7 @@ body {
 .hero-content p {
     font-size: 1.2rem;
     color: #ffffff;
-    margin-bottom: -20rem;
+    margin-bottom: -18rem;
 }
 
 /* College Memories Gallery */
@@ -425,5 +422,5 @@ footer .social-icons:hover {
 .results-section,
 .gallery-section,
 .top-section {
-    padding-top: 6rem; /* Match with the height of the fixed navbar */
+    padding-top: 4rem; /* Match with the height of the fixed navbar */
 }
