@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo"><a href="index.html#hero">APRO</div>
+        <nav>
+            <a href="index.html#hero">Home</a>
+            <a href="index.html#collegeMemories">Gallery</a>
+            <a href="result.html">Results</a>
+            <a href="#footer">Connect</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Results Section -->
+        <section id="results" class="results-section section">
+            <h1>Examination Results</h1>
+            <input type="text" id="searchInput" onkeyup="searchResults()"
+                placeholder="Search for names or roll numbers...">
+            <div id="message"></div>
+
+            <!-- Semester Results with Dropdown -->
+            <div class="table-container">
+                <div class="dropdown-header" onclick="toggleDropdown('semester1')">Semester 1 Results</div>
+                <div id="semester1" class="semester-table hidden">
+                    <table id="bca1">
+                        <tr>
+                            <th rowspan="4">Roll No</th>
+                            <th rowspan="4">Name Of Candidate</th>
+                            <th rowspan="4">Registration No.</th>
+                            <th></th>
+                            <th colspan="3">Fundamentals of Computer & information technology</th>
+                            <th colspan="3">Communicative English</th>
+                            <th colspan="3">Programming Methedology & Programming with C Language</th>
+                            <th rowspan="2">Total Alloted</th>
+                            <th rowspan="2">Computer Practical</th>
+                            <th rowspan="2">Aggregate</th>
+                            <th rowspan="4">Rank</th>
+                            <th rowspan="4">Result</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <th style="font-size: small;">Full Marks</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>300</th>
+                            <th>100</th>
+                            <th>400</th>
+                        </tr>
+                        <tr>
+                            <th style="font-size: small;">Pass Marks</th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>135</th>
+                            <th>45</th>
+                            <th>180</th>
+                        </tr>
+                        <tr>
+                            <th>[1]</th>
+                            <th>[2]</th>
+                            <th>[3]</th>
+                            <th>[4]</th>
+                            <th>[5]</th>
+                            <th>[6]</th>
+                            <th>[7]</th>
+                            <th>[8]</th>
+                            <th>[9]</th>
+                            <th>[10]</th>
+                            <th>[11]</th>
+                            <th>[12]</th>
+                            <th>[13]</th>
+                            <th>[14]</th>
+                            <th>[15]</th>
+                            <th>[16]</th>
+                            <th>[17]</th>
+                            <th>[18]</th>
+                        </tr>
+                        <tr>
+                            <td>1668</td>
+                            <td>KHUSHI PODDAR</td>
+                            <td>2304V330046</td>
+                            <td></td>
+                            <td>57</td>
+                            <td>23</td>
+                            <td>80</td>
+                            <td>50</td>
+                            <td>24</td>
+                            <td>74</td>
+                            <td>52</td>
+                            <td>24</td>
+                            <td>76</td>
+                            <td>230</td>
+                            <td>80</td>
+                            <td>310</td>
+                            <td>6</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1669</td>
+                            <td>RITIK KUMAR SINGH</td>
+                            <td>2304V330047</td>
+                            <td></td>
+                            <td>39</td>
+                            <td>27</td>
+                            <td>66</td>
+                            <td>50</td>
+                            <td>28</td>
+                            <td>78</td>
+                            <td>52</td>
+                            <td>28</td>
+                            <td>80</td>
+                            <td>224</td>
+                            <td>85</td>
+                            <td>309</td>
+                            <td>7</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1670</td>
+                            <td>SHAIKH MOHID SAIF</td>
+                            <td>2304V330048</td>
+                            <td></td>
+                            <td>43</td>
+                            <td>22</td>
+                            <td>65</td>
+                            <td>54</td>
+                            <td>23</td>
+                            <td>77</td>
+                            <td>45</td>
+                            <td>23</td>
+                            <td>68</td>
+                            <td>210</td>
+                            <td>80</td>
+                            <td>290</td>
+                            <td>14</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1671</td>
+                            <td>AMAN KUMAR</td>
+                            <td>2304V330049</td>
+                            <td></td>
+                            <td>44</td>
+                            <td>24</td>
+                            <td>68</td>
+                            <td>52</td>
+                            <td>25</td>
+                            <td>77</td>
+                            <td>49</td>
+                            <td>25</td>
+                            <td>74</td>
+                            <td>219</td>
+                            <td>59</td>
+                            <td>278</td>
+                            <td>15</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1672</td>
+                            <td>NITISH KUMAR</td>
+                            <td>2304V330050</td>
+                            <td></td>
+                            <td>47</td>
+                            <td>26</td>
+                            <td>73</td>
+                            <td>52</td>
+                            <td>27</td>
+                            <td>79</td>
+                            <td>44</td>
+                            <td>27</td>
+                            <td>71</td>
+                            <td>223</td>
+                            <td>90</td>
+                            <td>313</td>
+                            <td>5</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1673</td>
+                            <td>ARYAN RAJ</td>
+                            <td>2304V330051</td>
+                            <td></td>
+                            <td>54</td>
+                            <td>29</td>
+                            <td>83</td>
+                            <td>50</td>
+                            <td>28</td>
+                            <td>78</td>
+                            <td>49</td>
+                            <td>28</td>
+                            <td>77</td>
+                            <td>238</td>
+                            <td>94</td>
+                            <td>332</td>
+                            <td>1</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1674</td>
+                            <td>PRITAM KUMAR SHA</td>
+                            <td>2304V330052</td>
+                            <td></td>
+                            <td>55</td>
+                            <td>28</td>
+                            <td>83</td>
+                            <td>50</td>
+                            <td>29</td>
+                            <td>79</td>
+                            <td>46</td>
+                            <td>29</td>
+                            <td>75</td>
+                            <td>237</td>
+                            <td>93</td>
+                            <td>330</td>
+                            <td>2</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1675</td>
+                            <td>PRIYA KUMARI</td>
+                            <td>2304V330054</td>
+                            <td></td>
+                            <td>39</td>
+                            <td>28</td>
+                            <td>67</td>
+                            <td>50</td>
+                            <td>29</td>
+                            <td>79</td>
+                            <td>40</td>
+                            <td>28</td>
+                            <td>68</td>
+                            <td>214</td>
+                            <td>92</td>
+                            <td>306</td>
+                            <td>8</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1676</td>
+                            <td>ARPEET ANAND</td>
+                            <td>2304V330055</td>
+                            <td></td>
+                            <td>34</td>
+                            <td>26</td>
+                            <td>60</td>
+                            <td>52</td>
+                            <td>27</td>
+                            <td>79</td>
+                            <td>47</td>
+                            <td>27</td>
+                            <td>74</td>
+                            <td>213</td>
+                            <td>87</td>
+                            <td>300</td>
+                            <td>12</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1677</td>
+                            <td>RUDRANSH SARAF</td>
+                            <td>2304V330056</td>
+                            <td></td>
+                            <td>AB</td>
+                            <td>27</td>
+                            <td>27</td>
+                            <td>AB</td>
+                            <td>28</td>
+                            <td>28</td>
+                            <td>AB</td>
+                            <td>27</td>
+                            <td>27</td>
+                            <td>82</td>
+                            <td></td>
+                            <td>82</td>
+                            <td>16</td>
+                            <td>FAIL</td>
+                        </tr>
+                        <tr>
+                            <td>1678</td>
+                            <td>NEHA SHRAMA</td>
+                            <td>2304V330057</td>
+                            <td></td>
+                            <td>41</td>
+                            <td>24</td>
+                            <td>65</td>
+                            <td>52</td>
+                            <td>25</td>
+                            <td>77</td>
+                            <td>50</td>
+                            <td>25</td>
+                            <td>75</td>
+                            <td>217</td>
+                            <td>87</td>
+                            <td>304</td>
+                            <td>9</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1679</td>
+                            <td>SHIVAM KUMAR</td>
+                            <td>2304V330058</td>
+                            <td></td>
+                            <td>50</td>
+                            <td>25</td>
+                            <td>75</td>
+                            <td>52</td>
+                            <td>26</td>
+                            <td>78</td>
+                            <td>46</td>
+                            <td>26</td>
+                            <td>72</td>
+                            <td>225</td>
+                            <td>79</td>
+                            <td>304</td>
+                            <td>9</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1680</td>
+                            <td>SURAJ KUMAR SHA</td>
+                            <td>2304V330060</td>
+                            <td></td>
+                            <td>51</td>
+                            <td>27</td>
+                            <td>78</td>
+                            <td>52</td>
+                            <td>27</td>
+                            <td>79</td>
+                            <td>50</td>
+                            <td>27</td>
+                            <td>77</td>
+                            <td>234</td>
+                            <td>90</td>
+                            <td>324</td>
+                            <td>3</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1681</td>
+                            <td>RAVI KUMAR RAJAK</td>
+                            <td>2304V330061</td>
+                            <td></td>
+                            <td>44</td>
+                            <td>24</td>
+                            <td>68</td>
+                            <td>54</td>
+                            <td>25</td>
+                            <td>79</td>
+                            <td>50</td>
+                            <td>25</td>
+                            <td>75</td>
+                            <td>222</td>
+                            <td>80</td>
+                            <td>302</td>
+                            <td>11</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1682</td>
+                            <td>SHRUTI KUMARI</td>
+                            <td>2304V330062</td>
+                            <td></td>
+                            <td>55</td>
+                            <td>26</td>
+                            <td>81</td>
+                            <td>52</td>
+                            <td>27</td>
+                            <td>79</td>
+                            <td>47</td>
+                            <td>27</td>
+                            <td>74</td>
+                            <td>234</td>
+                            <td>90</td>
+                            <td>324</td>
+                            <td>3</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1683</td>
+                            <td>SUMAN KUMAR SINGH</td>
+                            <td>2304V330063</td>
+                            <td></td>
+                            <td>33</td>
+                            <td>24</td>
+                            <td>57</td>
+                            <td>52</td>
+                            <td>26</td>
+                            <td>78</td>
+                            <td>48</td>
+                            <td>26</td>
+                            <td>74</td>
+                            <td>209</td>
+                            <td>88</td>
+                            <td>297</td>
+                            <td>13</td>
+                            <td>PASS</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="table-container">
+                <div class="dropdown-header" onclick="toggleDropdown('semester2')">Semester 2 Results</div>
+                <div id="semester2" class="semester-table hidden">
+                    <table id="bca2">
+                        <tr>
+                            <th rowspan="4">Roll No</th>
+                            <th rowspan="4">Name Of Candidate</th>
+                            <th rowspan="4">Registration No.</th>
+                            <th></th>
+                            <th colspan="3">Mathematics-(I) Advanced Calculas and Matrices (II) Numerical Methods</th>
+                            <th colspan="3">Data Structure</th>
+                            <th colspan="3">Object Oriented Programming With C</th>
+                            <th rowspan="2">Total Alloted</th>
+                            <th rowspan="2">Computer Practical</th>
+                            <th rowspan="2">Aggregate</th>
+                            <th rowspan="4">Rank</th>
+                            <th rowspan="4">Result</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <th style="font-size: small;">Full Marks</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>70</th>
+                            <th>30</th>
+                            <th>100</th>
+                            <th>300</th>
+                            <th>100</th>
+                            <th>400</th>
+                        </tr>
+                        <tr>
+                            <th style="font-size: small;">Pass Marks</th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>31.5</th>
+                            <th>13.5</th>
+                            <th></th>
+                            <th>135</th>
+                            <th>45</th>
+                            <th>180</th>
+                        </tr>
+                        <tr>
+                            <th>[1]</th>
+                            <th>[2]</th>
+                            <th>[3]</th>
+                            <th>[4]</th>
+                            <th>[5]</th>
+                            <th>[6]</th>
+                            <th>[7]</th>
+                            <th>[8]</th>
+                            <th>[9]</th>
+                            <th>[10]</th>
+                            <th>[11]</th>
+                            <th>[12]</th>
+                            <th>[13]</th>
+                            <th>[14]</th>
+                            <th>[15]</th>
+                            <th>[16]</th>
+                            <th>[17]</th>
+                            <th>[18]</th>
+                        </tr>
+                        <tr>
+                            <td>1668</td>
+                            <td>KHUSHI PODDAR</td>
+                            <td>2304V330046</td>
+                            <td></td>
+                            <td>54</td>
+                            <td>20</td>
+                            <td>74</td>
+                            <td>49</td>
+                            <td>21</td>
+                            <td>70</td>
+                            <td>63</td>
+                            <td>20</td>
+                            <td>83</td>
+                            <td>227</td>
+                            <td>83</td>
+                            <td>310</td>
+                            <td>5</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1669</td>
+                            <td>RITIK KUMAR SINGH</td>
+                            <td>2304V330047</td>
+                            <td></td>
+                            <td>52</td>
+                            <td>26</td>
+                            <td>78</td>
+                            <td>57</td>
+                            <td>27</td>
+                            <td>84</td>
+                            <td>57</td>
+                            <td>27</td>
+                            <td>84</td>
+                            <td>246</td>
+                            <td>92</td>
+                            <td>338</td>
+                            <td>1</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1670</td>
+                            <td>SHAIKH MOHID SAIF</td>
+                            <td>2304V330048</td>
+                            <td></td>
+                            <td>48</td>
+                            <td>18</td>
+                            <td>66</td>
+                            <td>54</td>
+                            <td>18</td>
+                            <td>72</td>
+                            <td>61</td>
+                            <td>22</td>
+                            <td>83</td>
+                            <td>221</td>
+                            <td>85</td>
+                            <td>306</td>
+                            <td>6</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1671</td>
+                            <td>AMAN KUMAR</td>
+                            <td>2304V330049</td>
+                            <td></td>
+                            <td>37</td>
+                            <td>19</td>
+                            <td>56</td>
+                            <td>54</td>
+                            <td>19</td>
+                            <td>73</td>
+                            <td>51</td>
+                            <td>21</td>
+                            <td>72</td>
+                            <td>201</td>
+                            <td>80</td>
+                            <td>281</td>
+                            <td>15</td>
+                            <td>PASS</td>
+
+                        </tr>
+                        <tr>
+                            <td>1672</td>
+                            <td>NITISH KUMAR</td>
+                            <td>2304V330050</td>
+                            <td></td>
+                            <td>40</td>
+                            <td>18</td>
+                            <td>58</td>
+                            <td>50</td>
+                            <td>18</td>
+                            <td>68</td>
+                            <td>59</td>
+                            <td>17</td>
+                            <td>76</td>
+                            <td>202</td>
+                            <td>80</td>
+                            <td>282</td>
+                            <td>14</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1673</td>
+                            <td>ARYAN RAJ</td>
+                            <td>2304V330051</td>
+                            <td></td>
+                            <td>43</td>
+                            <td>28</td>
+                            <td>71</td>
+                            <td>52</td>
+                            <td>28</td>
+                            <td>80</td>
+                            <td>58</td>
+                            <td>29</td>
+                            <td>87</td>
+                            <td>238</td>
+                            <td>95</td>
+                            <td>333</td>
+                            <td>3</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1674</td>
+                            <td>PRITAM KUMAR SHA</td>
+                            <td>2304V330052</td>
+                            <td></td>
+                            <td>48</td>
+                            <td>29</td>
+                            <td>77</td>
+                            <td>53</td>
+                            <td>28</td>
+                            <td>81</td>
+                            <td>57</td>
+                            <td>29</td>
+                            <td>86</td>
+                            <td>244</td>
+                            <td>93</td>
+                            <td>337</td>
+                            <td>2</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1675</td>
+                            <td>PRIYA KUMARI</td>
+                            <td>2304V330054</td>
+                            <td></td>
+                            <td>42</td>
+                            <td>21</td>
+                            <td>63</td>
+                            <td>46</td>
+                            <td>27</td>
+                            <td>73</td>
+                            <td>40</td>
+                            <td>22</td>
+                            <td>62</td>
+                            <td>198</td>
+                            <td>86</td>
+                            <td>284</td>
+                            <td>13</td>
+                            <td>PASS</td>
+
+                        </tr>
+                        <tr>
+                            <td>1676</td>
+                            <td>ARPEET ANAND</td>
+                            <td>2304V330055</td>
+                            <td></td>
+                            <td>38</td>
+                            <td>19</td>
+                            <td>57</td>
+                            <td>54</td>
+                            <td>21</td>
+                            <td>75</td>
+                            <td>61</td>
+                            <td>20</td>
+                            <td>81</td>
+                            <td>213</td>
+                            <td>83</td>
+                            <td>296</td>
+                            <td>8</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1678</td>
+                            <td>NEHA SHRAMA</td>
+                            <td>2304V330057</td>
+                            <td></td>
+                            <td>52</td>
+                            <td>16</td>
+                            <td>68</td>
+                            <td>50</td>
+                            <td>19</td>
+                            <td>69</td>
+                            <td>58</td>
+                            <td>18</td>
+                            <td>76</td>
+                            <td>213</td>
+                            <td>81</td>
+                            <td>294</td>
+                            <td>9</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1679</td>
+                            <td>SHIVAM KUMAR</td>
+                            <td>2304V330058</td>
+                            <td></td>
+                            <td>57</td>
+                            <td>19</td>
+                            <td>76</td>
+                            <td>43</td>
+                            <td>18</td>
+                            <td>61</td>
+                            <td>54</td>
+                            <td>19</td>
+                            <td>73</td>
+                            <td>210</td>
+                            <td>80</td>
+                            <td>290</td>
+                            <td>10</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1680</td>
+                            <td>SURAJ KUMAR SHA</td>
+                            <td>2304V330060</td>
+                            <td></td>
+                            <td>55</td>
+                            <td>24</td>
+                            <td>79</td>
+                            <td>53</td>
+                            <td>25</td>
+                            <td>78</td>
+                            <td>60</td>
+                            <td>26</td>
+                            <td>86</td>
+                            <td>243</td>
+                            <td>89</td>
+                            <td>332</td>
+                            <td>4</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1681</td>
+                            <td>RAVI KUMAR RAJAK</td>
+                            <td>2304V330061</td>
+                            <td></td>
+                            <td>50</td>
+                            <td>18</td>
+                            <td>68</td>
+                            <td>49</td>
+                            <td>18</td>
+                            <td>67</td>
+                            <td>52</td>
+                            <td>19</td>
+                            <td>71</td>
+                            <td>206</td>
+                            <td>80</td>
+                            <td>286</td>
+                            <td>12</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1682</td>
+                            <td>SHRUTI KUMARI</td>
+                            <td>2304V330062</td>
+                            <td></td>
+                            <td>45</td>
+                            <td>20</td>
+                            <td>65</td>
+                            <td>50</td>
+                            <td>25</td>
+                            <td>75</td>
+                            <td>58</td>
+                            <td>23</td>
+                            <td>81</td>
+                            <td>221</td>
+                            <td>84</td>
+                            <td>305</td>
+                            <td>7</td>
+                            <td>PASS</td>
+                        </tr>
+                        <tr>
+                            <td>1683</td>
+                            <td>SUMAN KUMAR SINGH</td>
+                            <td>2304V330063</td>
+                            <td></td>
+                            <td>39</td>
+                            <td>20</td>
+                            <td>59</td>
+                            <td>42</td>
+                            <td>20</td>
+                            <td>62</td>
+                            <td>62</td>
+                            <td>21</td>
+                            <td>83</td>
+                            <td>204</td>
+                            <td>83</td>
+                            <td>287</td>
+                            <td>11</td>
+                            <td>PASS</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Repeat for other semesters up to semester 6 -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <!-- Connect Section -->
+        <!-- <section id="connect" class="connect-section section"> -->
+        <h1>Connect with Us</h1>
+        <div class="top-section">
+            <div class="profile-image">
+                <img src="https://yt3.googleusercontent.com/Bab4RzWTH_9wBsY913b-Z-sK8clrWL26lFn1fNHCW2XDnkCqCzsefgRMTbPyCZdOZJz60b9MmZg=s900-c-k-c0x00ffffff-no-rj"
+                    alt="Profile Picture">
+            </div>
+            <div class="name-title">
+                <h1>ARYAN RAJ</h1>
+            </div>
+        </div>
+        <!-- <div class="footer-content"> -->
+        <div class="social-icons">
+            <p>More Follow Us On Social:</p>
+
+            <a href="https://www.facebook.com/aryanraj.19"><img
+                    src="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Black-Logo.wine.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/aryanraj.19"><img
+                    src="https://www.logo.wine/a/logo/Instagram/Instagram-Glyph-Black-Logo.wine.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.youtube.com/@aryanrajart"><img
+                    src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Almost-Black-Logo.wine.svg"
+                    alt="YouTube"></a>
+            <a href="https://www.linkedin.com/in/aryan-raj19"><img
+                    src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Icon-Black-Logo.wine.svg" alt="LinkedIn"></a>
+            <a href="https://open.spotify.com/user/31tf7ugpkn7nr6mveduuxmxguna4"><img
+                    src="https://www.logo.wine/a/logo/Spotify/Spotify-Icon-Black-Logo.wine.svg" alt=""></a>
+        </div>
+        <div class="top-section">
+            <p>APRO &copy; | All rights reserved</p>
+        </div>
+        <!-- </section> -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

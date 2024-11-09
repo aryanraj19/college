@@ -1,0 +1,479 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    position: relative;
+}
+
+#mainContent {
+    padding-top: 5rem;
+    /* Adjust this value to match the navbar height */
+    position: relative;
+    z-index: 2;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: rgba(30, 30, 30, 0.8);
+    /* position: relative; */
+    position: fixed;
+    /* Keeps the navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    /* Ensures it spans the full width of the viewport */
+    z-index: 3;
+    /* Higher z-index so it appears above other content */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    a{
+        color: #bb86fc;
+        text-decoration: none;
+    }
+}
+
+.navbar nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: #bb86fc;
+}
+
+/* Section Styles */
+.section {
+    height: 100vh;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-section {
+    height: 100%;
+}
+
+/* Hero Section with Background Image and Specific Element Positions */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 0;
+    animation: slideBackground 18s infinite linear;
+    z-index: -1;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+        padding: 1rem 0;
+    }
+
+    .hero-section::before {
+        animation: slideBackground 15s infinite linear;
+    }
+}
+
+/* Keyframes for sliding background effect with three images */
+@keyframes slideBackground {
+    0% {
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPC-7Myfwad1Q-Br_6ABOKHRUOxENCy3dqBGLfIIhf5FqGX_emTzObfmOUk9X2tXBpDVY3VWXPIzvSWoX3NZlKltXWQ_Uc6FqgJCQHoTnRmRjgX2wtomtGyBNcH9dSn_6ft_vL__wZoQNAHtFo-OHwk=w1920-h843-s-no-gm?authuser=0');
+        background-position: 0 0;
+    }
+
+    33% {
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczM_46ldKy1mcZU6YNmqWXy6-RTY4IKteSdDeUKPGTAmPQsGo7AdIBW0pKruFigotFCUXMvMNf0hX5-0L8Y0nzPnSsUNm36BxyUR_3uHdHQR8C4cr0a-Mc0ar7CfW0O3PbKtKkv89MptxctY_QnUIheS=w1599-h899-s-no-gm?authuser=0');
+        background-position: -100% 0;
+    }
+
+    66% {
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPnoWxCVX42y_jRdNnSHihOQSgJypSFM5TTEBs8OGanjgZ6iCGw4aTUmOdNpJhksoMlyF0GCFzsfJRyM3QC5Xs8vpSRn-LwDaDZb2UHCZBkS_CEIKni6_-L4t_k3suX2THijDfY8xShkbXArElK2g3S=w685-h913-s-no-gm?authuser=0');
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPC-7Myfwad1Q-Br_6ABOKHRUOxENCy3dqBGLfIIhf5FqGX_emTzObfmOUk9X2tXBpDVY3VWXPIzvSWoX3NZlKltXWQ_Uc6FqgJCQHoTnRmRjgX2wtomtGyBNcH9dSn_6ft_vL__wZoQNAHtFo-OHwk=w1920-h843-s-no-gm?authuser=0');
+        background-position: -300% 0;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Ensures text is above overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    /* Spaces out elements within the hero-content */
+    gap: 1rem;
+}
+
+/* Heading at the top */
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #bb86fc;
+    margin-top: 82px;
+}
+
+/* Button in the center */
+#scrollBtn {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    color: #121212;
+    background-color: #bb86fc;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+
+#scrollBtn:hover {
+    background-color: #d19dfb;
+}
+
+/* Paragraph positioned at the bottom */
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: -18rem;
+}
+
+/* College Memories Gallery */
+.gallery-section {
+    padding: 2rem;
+}
+
+.gallery-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #bb86fc;
+    margin-bottom: 1rem;
+}
+
+/* add */
+.gallery-container {
+    max-width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    /* Ensures the image fills the gallery item container */
+    object-fit: cover;
+    /* Adjusts how the image is resized within its container */
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(50%);
+}
+
+
+.gallery-item .images {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    overflow: hidden;
+}
+
+.gallery-item .images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.gallery-item .images img.active {
+    opacity: 1;
+}
+
+.gallery-item .caption {
+    padding: 0.5rem;
+    color: #bb86fc;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure lightbox appears on top */
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+/* Navigation and Close Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    color: #bb86fc;
+    font-size: 2em;
+    user-select: none;
+}
+
+/* Close Button in Top Right Corner */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    color: #bb86fc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lightbox .caption {
+    position: absolute;
+    bottom: 20px;
+    color: #bb86fc;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Results Section */
+.results-section {
+    padding: 2rem;
+}
+
+.results-section h1 {
+    font-size: 2rem;
+    color: #bb86fc;
+    margin-bottom: 1rem;
+}
+
+#searchInput {
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #444;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.table-container {
+    margin: 20px 0;
+    position: relative;
+    /* Ensure it's positioned within the stacking context */
+    z-index: 2;
+    /* Adjust z-index as necessary to place it above other elements */
+}
+
+
+.dropdown-header {
+    background-color: #1e1e1e;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #bb86fc;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.dropdown-header:hover {
+    background-color: #bb86fc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+th {
+    color: #bb86fc;
+    background-color: #333;
+}
+
+tr {
+    background-color: #222;
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Connect Section */
+.top-section {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #bb86fc;
+    background-color: #1e1e1e;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+
+    h1 {
+        color: #bb86fc;
+    }
+}
+
+footer img {
+    border-radius: 50px;
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+
+}
+
+.name-title h1 {
+    font-size: 24px;
+}
+
+.social-icons {
+    background-color: #161617;
+    border: 1px solid #bb86fc;
+    padding: 20px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    background-color: #bb86fc;
+}
+
+footer .social-icons:hover {
+    background-color: #bb86fc;
+    color: #121212;
+
+    img {
+        background-color: #f3f2f2;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #bb86fc;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .gallery-container,
+    .table-container {
+        padding: 1rem;
+    }
+
+    .navbar nav a {
+        margin: 0 0.5rem;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}
+
+/* For sections that are the full height of the viewport, adjust to avoid header overlap */
+.hero-section,
+.results-section,
+.gallery-section,
+.top-section {
+    padding-top: 4rem;
+    /* Match with the height of the fixed navbar */
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APRO Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html#hero">APRO</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#collegeMemories">Gallery</a>
+            <a href="result.html">Results</a>
+            <a href="#footer">Connect</a>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero-section section section1" id="hero">
+            <div class="hero-content">
+                <h1>Welcome to Our BCA Community</h1>
+                <p>Where friendships flourish and memories are made.</p>
+                <button id="scrollBtn">Explore</button>
+            </div>
+        </section>
+
+        <!-- College Memories Gallery Section -->
+        <section id="collegeMemories" class="gallery-section section">
+            <h1>College Memories Gallery</h1>
+
+            <div class="gallery-container">
+                <!-- Classroom -->
+                <div class="gallery-item" onclick="openLightbox([
+                'image/cls1.jpg',
+                'image/cls2.jpg',
+                'image/cls3.jpg',
+                'image/cls4.jpg'
+             ],'Classroom')">
+                    <div class="images">
+                        <img src="image/cls1.jpg" alt="">
+                        <img src="image/cls2.jpg" alt="">
+                        <img src="image/cls3.jpg" alt="">
+                        <img src="image/cls4.jpg" alt="">
+                    </div>
+                    <div class="caption">Classroom</div>
+                </div>
+                
+                <!-- Holi Celebration -->
+                <div class="gallery-item" onclick="openLightbox([
+                    'image/holi1.jpg',
+                    'image/holi2.jpg',
+                    'image/holi3.jpg',
+                    'image/holi4.jpg',
+                    'image/holi5.jpg',
+                 ],'Holi Celebration')">
+                    <div class="images">
+                        <img src="image/holi1.jpg" alt="">
+                        <img src="image/holi2.jpg" alt="">
+                        <img src="image/holi3.jpg" alt="">
+                        <img src="image/holi4.jpg" alt="">
+                        <img src="image/holi5.jpg" alt="">
+                    </div>
+                    <div class="caption">Holi Celebration</div>
+                </div>
+
+                <!-- Exam Day -->
+                <div class="gallery-item" onclick="openLightbox([
+                '',
+                ''
+             ],'Exam Day')">
+                    <div class="images">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                    <div class="caption">Exam Day</div>
+                </div>
+
+                <!-- Road Trip -->
+                <div class="gallery-item" onclick="openLightbox([
+                'image/rt1.jpg',
+                'image/rt2.jpg',
+                'image/rt3.jpg',
+                'image/rt4.jpg',
+             ],'Road Trip')">
+                    <div class="images">
+                        <img src="image/rt1.jpg" alt="">
+                        <img src="image/rt2.jpg" alt="">
+                        <img src="image/rt3.jpg" alt="">
+                        <img src="image/rt4.jpg" alt="">
+                    </div>
+                    <div class="caption">Road Trip</div>
+                </div>
+
+                <!-- College Function -->
+                <div class="gallery-item" onclick="openLightbox([
+                'image/fun1.jpg',
+                'image/fun2.jpg',
+                'image/fun3.jpg',
+                'image/fun4.jpg',
+                'image/fun5.jpg'
+             ],'College Function')">
+                    <div class="images">
+                        <img src="image/fun1.jpg" alt="">
+                        <img src="image/fun2.jpg" alt="">
+                        <img src="image/fun3.jpg" alt="">
+                        <img src="image/fun4.jpg" alt="">
+                        <img src="image/fun5.jpg" alt="">
+                    </div>
+                    <div class="caption">College Function</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox HTML -->
+    <div class="lightbox" id="lightbox">
+        <div class="controls">
+            <span onclick="prevImage()">&#10094;</span>
+            <span onclick="nextImage()">&#10095;</span>
+        </div>
+        <span class="close-btn" onclick="closeLightbox()">&#10006;</span>
+        <img id="lightboxImage" src="" alt="Lightbox Image">
+        <div class="caption" id="lightboxCaption"></div>
+    </div>
+
+    <footer id="footer">
+        <!-- Connect Section -->
+        <!-- <section id="connect" class="connect-section section"> -->
+        <h1>Connect with Us</h1>
+        <div class="top-section">
+            <div class="profile-image">
+                <img src="https://yt3.googleusercontent.com/Bab4RzWTH_9wBsY913b-Z-sK8clrWL26lFn1fNHCW2XDnkCqCzsefgRMTbPyCZdOZJz60b9MmZg=s900-c-k-c0x00ffffff-no-rj"
+                    alt="Profile Picture">
+            </div>
+            <div class="name-title">
+                <h1>ARYAN RAJ</h1>
+            </div>
+        </div>
+        <!-- <div class="footer-content"> -->
+        <div class="social-icons">
+            <p>More Follow Us On Social:</p>
+
+            <a href="https://www.facebook.com/aryanraj.19"><img
+                    src="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Black-Logo.wine.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/aryanraj.19"><img
+                    src="https://www.logo.wine/a/logo/Instagram/Instagram-Glyph-Black-Logo.wine.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.youtube.com/@aryanrajart"><img
+                    src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Almost-Black-Logo.wine.svg"
+                    alt="YouTube"></a>
+            <a href="https://www.linkedin.com/in/aryan-raj19"><img
+                    src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Icon-Black-Logo.wine.svg" alt="LinkedIn"></a>
+            <a href="https://open.spotify.com/user/31tf7ugpkn7nr6mveduuxmxguna4"><img
+                    src="https://www.logo.wine/a/logo/Spotify/Spotify-Icon-Black-Logo.wine.svg" alt=""></a>
+        </div>
+        <div class="top-section">
+            <p>APRO &copy; | All rights reserved</p>
+        </div>
+        <!-- </section> -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
